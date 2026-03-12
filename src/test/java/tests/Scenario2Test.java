@@ -11,7 +11,22 @@ public class Scenario2Test {
     @Test
     public void sliderTest() {
 
-        WebDriver driver = new ChromeDriver();
+       ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setPlatformName("Windows 10");
+browserOptions.setBrowserVersion("dev");
+HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+ltOptions.put("username", "geethamagapu963");
+ltOptions.put("accessKey", "LT_sI4P1oEfz34w7mmjPtRE2OLCMrORR6l8biWyiya8jAoyH8Y");
+ltOptions.put("visual", true);
+ltOptions.put("video", true);
+ltOptions.put("network", true);
+ltOptions.put("build", "TestMu Selenium Assignment");
+ltOptions.put("project", "Selenium 101 Assignment");
+ltOptions.put("name", "Scenario Tests");
+ltOptions.put("selenium_version", "4.0.0");
+ltOptions.put("w3c", true);
+ltOptions.put("accessibility", true);
+browserOptions.setCapability("LT:Options", ltOptions);
 
         driver.get("https://www.lambdatest.com/selenium-playground");
 
